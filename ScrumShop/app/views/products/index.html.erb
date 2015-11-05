@@ -21,7 +21,7 @@
         <td><%= product.description %></td>
         <td><%= number_to_currency(product.price, precision: 0) %></td>
         <td><%= product.stock %></td>
-        <td><%= product.category.name %></td>
+        <td><%= link_to product.category.name, category_products_path(product.category) %></td>
       </tr>
     <% end %>
   </tbody>
