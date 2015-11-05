@@ -2,6 +2,15 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+
+<%= form_tag("/products", method: "get", class:"navbar-form navbar-left") do %>
+  <div class="form-group">
+    <%= search_field_tag(:name, nil, {class:"form-control", placeholder:"nombre del producto"}) %>
+    <%= search_field_tag(:price, nil, {class:"form-control", placeholder:"precio maximo"}) %>
+  </div>
+  <%= submit_tag("Buscar", class:"btn btn-default") %>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>
