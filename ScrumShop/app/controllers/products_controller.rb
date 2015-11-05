@@ -9,6 +9,15 @@ class ProductsController < ApplicationController
     else
       @products = Category.find(params[:category_id]).products
     end
+
+    unless params[:name].nil?
+      @products = @products.where('name LIKE ?', "%#{params[:name]}%")
+    end
+
+    unless params[:price].nil?
+      @products = @products.where('price <= ?', params[:price])
+    end
+
   end
 
   # GET /products/1
