@@ -9,14 +9,14 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @product.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
-  <dd><%= @product.price %></dd>
+  <dd><%= number_to_currency(@product.price, precision: 0) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:stock) %>:</strong></dt>
   <dd><%= @product.stock %></dd>
   <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
-  <dd><%= @product.category_id %></dd>
+  <dd><%= @product.category.name %></dd>
 </dl>
+
+<%= product_image(@product) %>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
               products_path, :class => 'btn btn-default'  %>
-
-<%= product_image(@product) %>
