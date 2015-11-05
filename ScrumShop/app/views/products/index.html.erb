@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th>&nbsp;</th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
@@ -18,8 +18,8 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= link_to product.id, product_path(product) %></td>
-        <td><%= product.name %></td>
+        <td><%= product_thumbnail(product) %></td>
+        <td><%= link_to product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.price %></td>
         <td><%= product.stock %></td>
