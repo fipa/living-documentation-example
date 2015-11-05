@@ -7,6 +7,7 @@
   <div class="form-group">
     <%= search_field_tag(:name, nil, {class:"form-control", placeholder:"nombre del producto"}) %>
     <%= search_field_tag(:price, nil, {class:"form-control", placeholder:"precio maximo"}) %>
+    <%= select_tag(:category, options_from_collection_for_select(Category.where(1), "id", "name"), include_blank: true, class:"form-control") %>
   </div>
   <%= submit_tag("Buscar", class:"btn btn-default") %>
 <% end %>
