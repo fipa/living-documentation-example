@@ -4,11 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:category_id].nil?
-      @products = Product.all
-    else
-      @products = Category.find(params[:category_id]).products
-    end
+    @products = Product.all
 
     unless params[:name].blank?
       @products = @products.where('name LIKE ?', "%#{params[:name]}%")
