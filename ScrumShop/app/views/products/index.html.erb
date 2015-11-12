@@ -1,6 +1,13 @@
 <%- model_class = Product -%>
 <div class="page-header">
-  <h1><%= "Encontrado".pluralize(@products.size) %> <%= @products.size %> <%=t '.title', :default => "Producto".pluralize(@products.size).titleize %></h1>
+  <h1>
+    <% if @products.size > 0 %>
+      <%= "Encontrado".pluralize(@products.size) %> <%= @products.size %> <%=t '.title', 
+      :default => "Producto".pluralize(@products.size).titleize %>
+    <% else %>
+      No se encontraron productos
+    <% end %>
+  </h1>
 </div>
 
 <%= form_tag("/products", method: "get", class:"navbar-form navbar-left") do %>
@@ -9,7 +16,7 @@
     <%= search_field_tag(:price, nil, {class:"form-control", placeholder:"precio maximo"}) %>
     <%= select_tag(:category, options_from_collection_for_select(Category.where(1), "id", "name"), include_blank: true, class:"form-control") %>
   </div>
-  <%= submit_tag("Buscar", class:"btn btn-default") %>
+  <%= submit_tag("Buscar", class:"btn btn-default", id:"search") %>
 <% end %>
 
 <table class="table table-striped">

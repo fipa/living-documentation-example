@@ -4,19 +4,58 @@ Feature: Búsqueda de productos
 	Como usuario de ScrumShop
 	Quiero poder buscar productos
 
-
-	Scenario: Listado de productos existentes
-		Given Existen 1 productos en ScrumShop
+	Scenario Outline: Listado de productos existentes
+		Given Existe(n) <n> producto(s) en ScrumShop
 		When Navego al listado de productos existentes
-		Then Veo 1 producto
+		Then Veo <n> producto(s)
+	Examples:
+	| n |
+	| 0 |
+	| 1 |
+	| 3 |
+	| 10|
 
+	Scenario: Usuario busca productos existentes con nombre "Scrum"
+		Given existen los productos:
+		| Scrum Post-Its			|
+		| Scrum Quick Reference 	|
+		| Planning Poker Cards	 	|
+		| Agile Rocks T-Shirt	 	|
 
-	Scenario: Listado de productos existentes 2
-		Given Existen 2 productos en ScrumShop
 		When Navego al listado de productos existentes
-		Then Veo 2 productos
+    	And busco por nombre con la palabra Scrum
+    	Then veo los productos:
+    	| Scrum Post-Its 			|
+    	| Scrum Quick Reference 	|
 
-	Scenario: Listado de productos existentes 0
-		Given Existen 0 productos en ScrumShop
+    	But no veo los productos: 
+    	| Planning Poker Cards	 	|
+    	| Agile Rocks T-Shirt		|
+
+	Scenario: Usuario busca productos existentes con nombre "Agile"
+		Given existen los productos:
+		| Scrum Post-Its				|
+		| Scrum Quick Reference 		|
+		| Agile Planning Poker Cards 	|
+		| Agile Rocks T-Shirt	 		|
+
 		When Navego al listado de productos existentes
-		Then Veo 0 productos
+    	And busco por nombre con la palabra Agile
+    	Then veo los productos: 
+    	| Agile Planning Poker Cards 	|
+    	| Agile Rocks T-Shirt			|    	
+    	
+    	But no veo los productos:
+    	| Scrum Post-Its 				|
+    	| Scrum Quick Reference 		|
+
+	Scenario: Usuario busca productos inexistentes
+		Given existen los productos:
+		| Scrum Post-Its				|
+		| Scrum Quick Reference 		|
+		| Agile Planning Poker Cards 	|
+		| Agile Rocks T-Shirt	 		|
+
+		When Navego al listado de productos existentes
+    	And busco por nombre con la palabra EstaPalabraNoEstaEnElCatalogo
+    	Then Veo 0 producto(s)
