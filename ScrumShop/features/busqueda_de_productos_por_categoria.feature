@@ -1,7 +1,7 @@
-Feature: Búsqueda de productos por su categoria
+Feature: Búsqueda de productos por categoria
 	Para poder comprar productos y accesorios útiles para mi equipo Scrum
 	Como usuario de ScrumShop
-	Quiero poder buscar productos por su categoria
+	Quiero poder buscar productos por categoria
 
 	Background:
 		Given existen las categorias:

@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @categories = Category.all
 
     unless params[:name].blank?
       @products = @products.where('name LIKE ?', "%#{params[:name]}%")
@@ -16,6 +17,10 @@ class ProductsController < ApplicationController
 
     unless params[:category].blank?
       @products = @products.where('category_id = ?', params[:category])
+    end
+
+    if params[:available]
+      @products = @products.where('stock > 0')
     end
 
   end

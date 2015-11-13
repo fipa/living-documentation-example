@@ -16,7 +16,7 @@ articles_category_id = Category.find_by_name("Articulos").id
 books_category_id = Category.find_by_name("Libros").id
 t_shirts_category_id = Category.find_by_name("Poleras").id
 
-Product.create(name: 'Scrum Post Its', price: 1200, stock: 100, category_id: articles_category_id,
+Product.create(name: 'Scrum Post Its', price: 1200, stock: 0, category_id: articles_category_id,
 	description: 'Imprescindible para cualquier Planning, Grooming, Retrospectiva, con pegamento ultra sticky')
 
 Product.create(name: 'Scrum Quick Reference', price: 10000, stock: 20, category_id: books_category_id,

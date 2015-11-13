@@ -1,7 +1,7 @@
 Feature: Búsqueda de productos por precio maximo
 	Para poder comprar productos y accesorios útiles para mi equipo Scrum
 	Como usuario de ScrumShop
-	Quiero poder buscar productos por su precio
+	Quiero poder buscar productos por precio
 
 	Background:
     	Given existen los productos, con sus precios:

@@ -1,4 +1,4 @@
-Feature: Búsqueda de productos
+Feature: Búsqueda de productos por nombre
 	Para poder comprar productos y accesorios útiles para mi equipo Scrum
 	Como usuario de ScrumShop
 	Quiero poder buscar productos por su nombre
