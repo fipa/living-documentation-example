@@ -59,3 +59,26 @@ Feature: Búsqueda de productos
 		When Navego al listado de productos existentes
     	And busco por nombre con la palabra EstaPalabraNoEstaEnElCatalogo
     	Then Veo 0 producto(s)
+
+    Scenario: Usuario busca productos existentes con categoria "Articulos"
+		Given existen las categorias:
+		| Articulos	|
+		| Libros 	|
+		| Poleras	|
+
+		And existen los productos, con sus categorias:
+		| productos						| categorias|
+		| Scrum Quick Reference 		| Libros	|
+		| Agile Planning Poker Cards 	| Articulos	|
+		| Agile Rocks T-Shirt	 		| Poleras	|
+		| Scrum Post-Its				| Articulos	|
+
+		When Navego al listado de productos existentes
+		And busco por la categoria Articulos
+		Then veo los productos: 
+    	| Scrum Post-Its 				|
+    	| Agile Planning Poker Cards 	|
+
+    	But no veo los productos:
+    	| Agile Rocks T-Shirt			|
+    	| Scrum Quick Reference 		|
