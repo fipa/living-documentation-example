@@ -3,7 +3,7 @@ Feature: Búsqueda de productos por su categoria
 	Como usuario de ScrumShop
 	Quiero poder buscar productos por su categoria
 
-    Scenario: Usuario busca productos existentes con categoria "Articulos"
+	Background:
 		Given existen las categorias:
 		| Articulos	|
 		| Libros 	|
@@ -17,7 +17,9 @@ Feature: Búsqueda de productos por su categoria
 		| Scrum Post-Its				| Articulos	|
 
 		When Navego al listado de productos existentes
-		And busco por la categoria Articulos
+
+    Scenario: Usuario busca productos existentes con categoria "Articulos"
+		When busco por la categoria Articulos
 		Then veo los productos: 
     	| Scrum Post-Its 				|
     	| Agile Planning Poker Cards 	|
@@ -27,18 +29,5 @@ Feature: Búsqueda de productos por su categoria
     	| Scrum Quick Reference 		|
 
     Scenario: Usuario busca productos existentes con categoria vacía
-		Given existen las categorias:
-		| Articulos	|
-		| Libros 	|
-		| Poleras	|
-
-		And existen los productos, con sus categorias:
-		| producto						| categoria |
-		| Scrum Quick Reference 		| Libros	|
-		| Agile Planning Poker Cards 	| Articulos	|
-		| Agile Rocks T-Shirt	 		| Poleras	|
-		| Scrum Post-Its				| Articulos	|
-
-		When Navego al listado de productos existentes
-		And busco con categoria vacia
+		When busco con categoria vacia
 		Then Veo 4 producto(s)
