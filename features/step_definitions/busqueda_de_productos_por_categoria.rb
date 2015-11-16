@@ -15,11 +15,11 @@ Given(/^existen los productos, con sus categorias:$/i) do |products_table|
 end
 
 When(/^busco por la categoria (.*)$/i) do |search_string|
-	select search_string, :from => 'category'
+	select search_string, :from => 'category_id'
 	click_button 'search'
 end
 
 When(/^busco con categoria vacia$/i) do
-	select '', :from => 'category'
+	select '', :from => 'category_id'
 	click_button 'search'
 end
