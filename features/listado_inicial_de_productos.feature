@@ -4,9 +4,9 @@ Feature: Listado inicial de productos
 	Quiero poder ver todos los productos existentes
 
 	Scenario Outline: Listado de productos existentes
-		Given Existe(n) <n> producto(s) en ScrumShop
+		Given Existen <n> productos en ScrumShop
 		When Navego al listado de productos existentes
-		Then Veo <n> producto(s)
+		Then Veo <n> productos
 	Examples:
 	| n |
 	| 0 |

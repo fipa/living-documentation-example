@@ -30,4 +30,4 @@ Feature: Búsqueda de productos por categoria
 
     Scenario: Usuario busca productos existentes con categoria vacía
 		When busco con categoria vacia
-		Then Veo 4 producto(s)
+		Then Veo 4 productos

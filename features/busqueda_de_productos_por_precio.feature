@@ -25,4 +25,4 @@ Feature: Búsqueda de productos por precio maximo
 
     Scenario: Usuario busca productos existentes por precio 0
 		When busco por precio menor a 0
-		Then veo 0 producto(s)
+		Then veo 0 productos

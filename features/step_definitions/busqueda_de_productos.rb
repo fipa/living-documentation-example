@@ -1,4 +1,4 @@
-Given(/^Existe\(n\) (\d+) producto\(s\) en ScrumShop$/i) do |n_products|
+Given(/^Existen (\d+) productos en ScrumShop$/i) do |n_products|
 
 	i = 1
 	n_products.to_i.times do
@@ -22,7 +22,7 @@ When(/^Navego al listado de productos existentes$/i) do
 	visit '/products/'
 end
 
-Then(/^Veo (\d+) producto\(s\)$/i) do |n_products|
+Then(/^Veo (\d+) productos$/i) do |n_products|
 	if n_products.to_i > 0
 		page.assert_text(/Encontrados? #{n_products} Productos?/)
 	else

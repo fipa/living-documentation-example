@@ -24,4 +24,4 @@ Feature: Búsqueda de productos por nombre
 
 	Scenario: Usuario busca productos inexistentes
     	When busco por nombre con la palabra EstaPalabraNoEstaEnElCatalogo
-    	Then Veo 0 producto(s)
+    	Then Veo 0 productos
