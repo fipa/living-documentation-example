@@ -3,6 +3,11 @@
 *.log
 *.sql
 *.sqlite
+*.sqlite3
+
+# temp files #
+##############
+tmp
 
 # OS generated files #
 ######################
