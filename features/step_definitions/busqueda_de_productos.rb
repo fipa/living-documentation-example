@@ -1,17 +1,5 @@
-Given(/^Existen (\d+) productos en ScrumShop$/i) do |n_products|
-
-	i = 1
-	n_products.to_i.times do
-		Product.create(	name: "Scrum Post Its #{i}", 
-	  							description: "Imprescindible para cualquier Planning, Grooming, Retrospectiva, con pegamento ultra sticky",
-	  							price: 1200, stock: 100)
-		i+= 1
-	end
-end
-
 Given(/^existen los productos:$/i) do |products_table|
 	products_table.raw.each do |product|
-		print "product: #{product}"
 		Product.create(	name: product.first, 
 						description: "foo description",
 						price: 1200, stock: 100)

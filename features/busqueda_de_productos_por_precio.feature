@@ -13,7 +13,7 @@ Feature: Búsqueda de productos por precio maximo
 
 		When Navego al listado de productos existentes
 
-    Scenario: Usuario busca productos existentes por precio
+    Scenario: Usuario busca productos existentes por precio menor a 5000
 		When busco por precio menor a 5000
 		Then veo los productos: 
     	| Scrum Post-Its 				|

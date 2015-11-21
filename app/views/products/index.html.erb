@@ -1,13 +1,13 @@
 <%- model_class = Product -%>
 <div class="page-header">
-  <h1>
+  <h3>
     <% if @products.size > 0 %>
       <%= "Encontrado".pluralize(@products.size) %> <%= @products.size %> <%=t '.title', 
       :default => "Producto".pluralize(@products.size).titleize %>
     <% else %>
       No se encontraron productos
     <% end %>
-  </h1>
+  </h3>
 </div>
 
 <%= form_tag("/products", method: "get", class:"navbar-form navbar-left") do %>
