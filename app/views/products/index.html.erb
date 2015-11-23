@@ -37,7 +37,7 @@
         <td><%= link_to product_thumbnail(product), product_path(product) %></td>
         <td><%= link_to product.name, product_path(product) %></td>
         <td><%= product.description %></td>
-        <td><%= number_to_currency(product.price, precision: 0) %></td>
+        <td><%= number_to_currency(product.real_price, precision: 0) %></td>
         <td><%= product.stock %></td>
         <td>
           <% unless product.category.nil? %>

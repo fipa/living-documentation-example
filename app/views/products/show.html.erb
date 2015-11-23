@@ -9,11 +9,14 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @product.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
-  <dd><%= number_to_currency(@product.price, precision: 0) %></dd>
+  <dd><%= number_to_currency(@product.real_price, precision: 0) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:stock) %>:</strong></dt>
   <dd><%= @product.stock %></dd>
   <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
-  <dd><%= link_to @product.category.name, category_products_path(@product.category) %></dd>
+  <dd><% unless @product.category.nil? %>
+        <%= link_to @product.category.name, category_products_path(@product.category) %>
+      <% end %>
+  </dd>
 </dl>
 
 <%= product_image(@product) %>
