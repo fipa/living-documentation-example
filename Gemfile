@@ -49,6 +49,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'relish'
 end
 
 gem "twitter-bootstrap-rails"
