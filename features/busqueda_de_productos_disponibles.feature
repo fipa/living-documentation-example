@@ -1,6 +1,6 @@
 Feature: Búsqueda de productos disponibles
 	Para poder comprar productos y accesorios útiles para mi equipo Scrum
-	Como usuario de ScrumShop
+	Como usuario de The Scrum Store
 	Quiero poder buscar productos disponibles
 
 	Background: 
@@ -9,7 +9,7 @@ Feature: Búsqueda de productos disponibles
 		| Scrum Post-Its			|	1	|
 		| Scrum Quick Reference 	|	10	|
 		| Planning Poker Cards	 	|	0	|
-		| Agile Rocks T-Shirt	 	|	50	|
+		| Magnetic White Board		|	50	|
 		When Navego al listado de productos existentes
 	
 	Scenario: Usuario busca solo productos disponibles
@@ -18,7 +18,7 @@ Feature: Búsqueda de productos disponibles
     	Then veo los productos:
     	| Scrum Post-Its 			|
     	| Scrum Quick Reference 	|
-    	| Agile Rocks T-Shirt		|
+    	| Magnetic White Board		|
 
     	But no veo los productos: 
     	| Planning Poker Cards	 	|

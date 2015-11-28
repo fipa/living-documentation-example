@@ -25,6 +25,6 @@ Product.create(name: 'Scrum Quick Reference', price: 10000, stock: 20, category_
 Product.create(name: 'Planning Poker Cards', price: 3000, stock: 50, category_id: articles_category_id,
 	description: 'Cartas para jugar al Planning Poker')
 
-Product.create(name: 'Agile Rocks T-Shirt', price: 8000, stock: 30, category_id: t_shirts_category_id,
-	description: 'En tallas 1,2,3,5,8,13')
+Product.create(name: 'Magnetic White Board', price: 8000, stock: 30, category_id: articles_category_id,
+	description: 'Empower your daily meetings!')
 

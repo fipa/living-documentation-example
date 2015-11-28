@@ -1,6 +1,6 @@
 Feature: Búsqueda de productos por categoria
 	Para poder comprar productos y accesorios útiles para mi equipo Scrum
-	Como usuario de ScrumShop
+	Como usuario de The Scrum Store
 	Quiero poder buscar productos por categoria
 
 	Background:
@@ -13,7 +13,7 @@ Feature: Búsqueda de productos por categoria
 		| producto						| categoria |
 		| Scrum Quick Reference 		| Libros	|
 		| Agile Planning Poker Cards 	| Articulos	|
-		| Agile Rocks T-Shirt	 		| Poleras	|
+		| Magnetic White Board	 		| Articulos	|
 		| Scrum Post-Its				| Articulos	|
 
 		When Navego al listado de productos existentes
@@ -23,9 +23,10 @@ Feature: Búsqueda de productos por categoria
 		Then veo los productos: 
     	| Scrum Post-Its 				|
     	| Agile Planning Poker Cards 	|
+    	| Magnetic White Board			|
 
     	But no veo los productos:
-    	| Agile Rocks T-Shirt			|
+    	
     	| Scrum Quick Reference 		|
 
     Scenario: Usuario busca productos existentes con categoria vacía

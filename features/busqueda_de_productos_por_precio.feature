@@ -9,7 +9,7 @@ Feature: Búsqueda de productos por precio maximo
 		| Scrum Post-Its				|	1200	|
 		| Scrum Quick Reference 		|	10000	|
 		| Agile Planning Poker Cards 	|	3000	|
-		| Agile Rocks T-Shirt	 		|	8000	|
+		| Magnetic White Board			|	8000	|
 
 		When Navego al listado de productos existentes
 
@@ -20,7 +20,7 @@ Feature: Búsqueda de productos por precio maximo
     	| Agile Planning Poker Cards 	|
 
     	But no veo los productos:
-    	| Agile Rocks T-Shirt			|
+    	| Magnetic White Board			|
     	| Scrum Quick Reference 		|
 
     Scenario: Usuario busca productos existentes por precio 0

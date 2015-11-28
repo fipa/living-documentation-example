@@ -8,7 +8,7 @@ Feature: Búsqueda de productos por nombre
 		| Scrum Post-Its			|
 		| Scrum Quick Reference 	|
 		| Planning Poker Cards	 	|
-		| Agile Rocks T-Shirt	 	|
+		| Magnetic White Board		|
 		When Navego al listado de productos existentes
 	
 	Scenario: Usuario busca productos existentes con nombre "Scrum"
@@ -20,7 +20,7 @@ Feature: Búsqueda de productos por nombre
 
     	But no veo los productos: 
     	| Planning Poker Cards	 	|
-    	| Agile Rocks T-Shirt		|
+    	| Magnetic White Board		|
 
 	Scenario: Usuario busca productos inexistentes
     	When busco por nombre con la palabra EstaPalabraNoEstaEnElCatalogo
