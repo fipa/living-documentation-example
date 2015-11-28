@@ -1,111 +1,111 @@
 Using the default profile...
 Feature: Búsqueda de productos disponibles
   Para poder comprar productos y accesorios útiles para mi equipo Scrum
-  Como usuario de ScrumShop
+  Como usuario de The Scrum Store
   Quiero poder buscar productos disponibles
 
-  Background:                                      # features/busqueda_de_productos_disponibles.feature:6
-    Given existen los productos, con su stock:     # features/step_definitions/busqueda_de_productos_disponibles.rb:1
-      | producto              | stock |
-      | Scrum Post-Its        | 1     |
-      | Scrum Quick Reference | 10    |
-      | Planning Poker Cards  | 0     |
-      | Agile Rocks T-Shirt   | 50    |
-    When Navego al listado de productos existentes # features/step_definitions/busqueda_de_productos.rb:9
+  Background: [90m                                     # features/busqueda_de_productos_disponibles.feature:6[0m
+    [32mGiven existen los productos, con su stock:[90m     # features/step_definitions/busqueda_de_productos_disponibles.rb:1[0m[0m
+      | [32mproducto             [0m[0m |[0m [32mstock[0m[0m |[0m
+      | [32mScrum Post-Its       [0m[0m |[0m [32m1    [0m[0m |[0m
+      | [32mScrum Quick Reference[0m[0m |[0m [32m10   [0m[0m |[0m
+      | [32mPlanning Poker Cards [0m[0m |[0m [32m0    [0m[0m |[0m
+      | [32mMagnetic White Board [0m[0m |[0m [32m50   [0m[0m |[0m
+    [32mWhen Navego al listado de productos existentes[90m # features/step_definitions/busqueda_de_productos.rb:9[0m[0m
 
-  Scenario: Usuario busca solo productos disponibles # features/busqueda_de_productos_disponibles.feature:15
-    When busco solo productos disponibles            # features/step_definitions/busqueda_de_productos_disponibles.rb:9
-    Then veo los productos:                          # features/step_definitions/busqueda_de_productos.rb:21
-      | Scrum Post-Its        |
-      | Scrum Quick Reference |
-      | Agile Rocks T-Shirt   |
-    But no veo los productos:                        # features/step_definitions/busqueda_de_productos.rb:27
-      | Planning Poker Cards |
+  Scenario: Usuario busca solo productos disponibles[90m # features/busqueda_de_productos_disponibles.feature:15[0m
+    [32mWhen busco solo productos disponibles[90m            # features/step_definitions/busqueda_de_productos_disponibles.rb:9[0m[0m
+    [32mThen veo los productos:[90m                          # features/step_definitions/busqueda_de_productos.rb:21[0m[0m
+      | [32mScrum Post-Its       [0m[0m |[0m
+      | [32mScrum Quick Reference[0m[0m |[0m
+      | [32mMagnetic White Board [0m[0m |[0m
+    [32mBut no veo los productos:[90m                        # features/step_definitions/busqueda_de_productos.rb:27[0m[0m
+      | [32mPlanning Poker Cards[0m[0m |[0m
 
 Feature: Búsqueda de productos por categoria
   Para poder comprar productos y accesorios útiles para mi equipo Scrum
   Como usuario de The Scrum Store
   Quiero poder buscar productos por categoria
 
-  Background:                                      # features/busqueda_de_productos_por_categoria.feature:6
-    Given existen las categorias:                  # features/step_definitions/busqueda_de_productos_por_categoria.rb:1
-      | Articulos |
-      | Libros    |
-      | Poleras   |
-    And existen los productos, con sus categorias: # features/step_definitions/busqueda_de_productos_por_categoria.rb:7
-      | producto                   | categoria |
-      | Scrum Quick Reference      | Libros    |
-      | Agile Planning Poker Cards | Articulos |
-      | Magnetic White Board       | Articulos |
-      | Scrum Post-Its             | Articulos |
-    When Navego al listado de productos existentes # features/step_definitions/busqueda_de_productos.rb:9
+  Background: [90m                                     # features/busqueda_de_productos_por_categoria.feature:6[0m
+    [32mGiven existen las categorias:[90m                  # features/step_definitions/busqueda_de_productos_por_categoria.rb:1[0m[0m
+      | [32mArticulos[0m[0m |[0m
+      | [32mLibros   [0m[0m |[0m
+      | [32mPoleras  [0m[0m |[0m
+    [32mAnd existen los productos, con sus categorias:[90m # features/step_definitions/busqueda_de_productos_por_categoria.rb:7[0m[0m
+      | [32mproducto                  [0m[0m |[0m [32mcategoria[0m[0m |[0m
+      | [32mScrum Quick Reference     [0m[0m |[0m [32mLibros   [0m[0m |[0m
+      | [32mAgile Planning Poker Cards[0m[0m |[0m [32mArticulos[0m[0m |[0m
+      | [32mMagnetic White Board      [0m[0m |[0m [32mArticulos[0m[0m |[0m
+      | [32mScrum Post-Its            [0m[0m |[0m [32mArticulos[0m[0m |[0m
+    [32mWhen Navego al listado de productos existentes[90m # features/step_definitions/busqueda_de_productos.rb:9[0m[0m
 
-  Scenario: Usuario busca productos existentes con categoria "Articulos" # features/busqueda_de_productos_por_categoria.feature:21
-    When busco por la categoria Articulos                                # features/step_definitions/busqueda_de_productos_por_categoria.rb:17
-    Then veo los productos:                                              # features/step_definitions/busqueda_de_productos.rb:21
-      | Scrum Post-Its             |
-      | Agile Planning Poker Cards |
-      | Magnetic White Board       |
-    But no veo los productos:                                            # features/step_definitions/busqueda_de_productos.rb:27
-      | Scrum Quick Reference |
+  Scenario: Usuario busca productos existentes con categoria "Articulos"[90m # features/busqueda_de_productos_por_categoria.feature:21[0m
+    [32mWhen busco por la categoria [32m[1mArticulos[0m[0m[32m[90m                                # features/step_definitions/busqueda_de_productos_por_categoria.rb:17[0m[0m
+    [32mThen veo los productos:[90m                                              # features/step_definitions/busqueda_de_productos.rb:21[0m[0m
+      | [32mScrum Post-Its            [0m[0m |[0m
+      | [32mAgile Planning Poker Cards[0m[0m |[0m
+      | [32mMagnetic White Board      [0m[0m |[0m
+    [32mBut no veo los productos:[90m                                            # features/step_definitions/busqueda_de_productos.rb:27[0m[0m
+      | [32mScrum Quick Reference[0m[0m |[0m
 
-  Scenario: Usuario busca productos existentes con categoria vacía # features/busqueda_de_productos_por_categoria.feature:32
-    When busco con categoria vacia                                 # features/step_definitions/busqueda_de_productos_por_categoria.rb:22
-    Then Veo 4 productos                                           # features/step_definitions/busqueda_de_productos.rb:13
+  Scenario: Usuario busca productos existentes con categoria vacía[90m # features/busqueda_de_productos_por_categoria.feature:32[0m
+    [32mWhen busco con categoria vacia[90m                                 # features/step_definitions/busqueda_de_productos_por_categoria.rb:22[0m[0m
+    [32mThen Veo [32m[1m4[0m[0m[32m productos[90m                                           # features/step_definitions/busqueda_de_productos.rb:13[0m[0m
 
 Feature: Búsqueda de productos por nombre
   Para poder comprar productos y accesorios útiles para mi equipo Scrum
   Como usuario de ScrumShop
   Quiero poder buscar productos por su nombre
 
-  Background:                                      # features/busqueda_de_productos_por_nombre.feature:6
-    Given existen los productos:                   # features/step_definitions/busqueda_de_productos.rb:1
-      | Scrum Post-Its        |
-      | Scrum Quick Reference |
-      | Planning Poker Cards  |
-      | Magnetic White Board  |
-    When Navego al listado de productos existentes # features/step_definitions/busqueda_de_productos.rb:9
+  Background: [90m                                     # features/busqueda_de_productos_por_nombre.feature:6[0m
+    [32mGiven existen los productos:[90m                   # features/step_definitions/busqueda_de_productos.rb:1[0m[0m
+      | [32mScrum Post-Its       [0m[0m |[0m
+      | [32mScrum Quick Reference[0m[0m |[0m
+      | [32mPlanning Poker Cards [0m[0m |[0m
+      | [32mMagnetic White Board [0m[0m |[0m
+    [32mWhen Navego al listado de productos existentes[90m # features/step_definitions/busqueda_de_productos.rb:9[0m[0m
 
-  Scenario: Usuario busca productos existentes con nombre "Scrum" # features/busqueda_de_productos_por_nombre.feature:14
-    When busco por nombre con la palabra Scrum                    # features/step_definitions/busqueda_de_productos_por_nombre.rb:1
-    Then veo los productos:                                       # features/step_definitions/busqueda_de_productos.rb:21
-      | Scrum Post-Its        |
-      | Scrum Quick Reference |
-    But no veo los productos:                                     # features/step_definitions/busqueda_de_productos.rb:27
-      | Planning Poker Cards |
-      | Magnetic White Board |
+  Scenario: Usuario busca productos existentes con nombre "Scrum"[90m # features/busqueda_de_productos_por_nombre.feature:14[0m
+    [32mWhen busco por nombre con la palabra [32m[1mScrum[0m[0m[32m[90m                    # features/step_definitions/busqueda_de_productos_por_nombre.rb:1[0m[0m
+    [32mThen veo los productos:[90m                                       # features/step_definitions/busqueda_de_productos.rb:21[0m[0m
+      | [32mScrum Post-Its       [0m[0m |[0m
+      | [32mScrum Quick Reference[0m[0m |[0m
+    [32mBut no veo los productos:[90m                                     # features/step_definitions/busqueda_de_productos.rb:27[0m[0m
+      | [32mPlanning Poker Cards[0m[0m |[0m
+      | [32mMagnetic White Board[0m[0m |[0m
 
-  Scenario: Usuario busca productos inexistentes                       # features/busqueda_de_productos_por_nombre.feature:25
-    When busco por nombre con la palabra EstaPalabraNoEstaEnElCatalogo # features/step_definitions/busqueda_de_productos_por_nombre.rb:1
-    Then Veo 0 productos                                               # features/step_definitions/busqueda_de_productos.rb:13
+  Scenario: Usuario busca productos inexistentes[90m                       # features/busqueda_de_productos_por_nombre.feature:25[0m
+    [32mWhen busco por nombre con la palabra [32m[1mEstaPalabraNoEstaEnElCatalogo[0m[0m[32m[90m # features/step_definitions/busqueda_de_productos_por_nombre.rb:1[0m[0m
+    [32mThen Veo [32m[1m0[0m[0m[32m productos[90m                                               # features/step_definitions/busqueda_de_productos.rb:13[0m[0m
 
 Feature: Búsqueda de productos por precio maximo
   Para poder comprar productos y accesorios útiles para mi equipo Scrum
   Como usuario de ScrumShop
   Quiero poder buscar productos por precio
 
-  Background:                                      # features/busqueda_de_productos_por_precio.feature:6
-    Given existen los productos, con sus precios:  # features/step_definitions/busqueda_de_productos_por_precio.rb:1
-      | producto                   | precio |
-      | Scrum Post-Its             | 1200   |
-      | Scrum Quick Reference      | 10000  |
-      | Agile Planning Poker Cards | 3000   |
-      | Magnetic White Board       | 8000   |
-    When Navego al listado de productos existentes # features/step_definitions/busqueda_de_productos.rb:9
+  Background: [90m                                     # features/busqueda_de_productos_por_precio.feature:6[0m
+    [32mGiven existen los productos, con sus precios:[90m  # features/step_definitions/busqueda_de_productos_por_precio.rb:1[0m[0m
+      | [32mproducto                  [0m[0m |[0m [32mprecio[0m[0m |[0m
+      | [32mScrum Post-Its            [0m[0m |[0m [32m1200  [0m[0m |[0m
+      | [32mScrum Quick Reference     [0m[0m |[0m [32m10000 [0m[0m |[0m
+      | [32mAgile Planning Poker Cards[0m[0m |[0m [32m3000  [0m[0m |[0m
+      | [32mMagnetic White Board      [0m[0m |[0m [32m8000  [0m[0m |[0m
+    [32mWhen Navego al listado de productos existentes[90m # features/step_definitions/busqueda_de_productos.rb:9[0m[0m
 
-  Scenario: Usuario busca productos existentes por precio menor a 5000 # features/busqueda_de_productos_por_precio.feature:16
-    When busco por precio menor a 5000                                 # features/step_definitions/busqueda_de_productos_por_precio.rb:10
-    Then veo los productos:                                            # features/step_definitions/busqueda_de_productos.rb:21
-      | Scrum Post-Its             |
-      | Agile Planning Poker Cards |
-    But no veo los productos:                                          # features/step_definitions/busqueda_de_productos.rb:27
-      | Magnetic White Board  |
-      | Scrum Quick Reference |
+  Scenario: Usuario busca productos existentes por precio menor a 5000[90m # features/busqueda_de_productos_por_precio.feature:16[0m
+    [32mWhen busco por precio menor a [32m[1m5000[0m[0m[32m[90m                                 # features/step_definitions/busqueda_de_productos_por_precio.rb:10[0m[0m
+    [32mThen veo los productos:[90m                                            # features/step_definitions/busqueda_de_productos.rb:21[0m[0m
+      | [32mScrum Post-Its            [0m[0m |[0m
+      | [32mAgile Planning Poker Cards[0m[0m |[0m
+    [32mBut no veo los productos:[90m                                          # features/step_definitions/busqueda_de_productos.rb:27[0m[0m
+      | [32mMagnetic White Board [0m[0m |[0m
+      | [32mScrum Quick Reference[0m[0m |[0m
 
-  Scenario: Usuario busca productos existentes por precio 0 # features/busqueda_de_productos_por_precio.feature:26
-    When busco por precio menor a 0                         # features/step_definitions/busqueda_de_productos_por_precio.rb:10
-    Then veo 0 productos                                    # features/step_definitions/busqueda_de_productos.rb:13
+  Scenario: Usuario busca productos existentes por precio 0[90m # features/busqueda_de_productos_por_precio.feature:26[0m
+    [32mWhen busco por precio menor a [32m[1m0[0m[0m[32m[90m                         # features/step_definitions/busqueda_de_productos_por_precio.rb:10[0m[0m
+    [32mThen veo [32m[1m0[0m[0m[32m productos[90m                                    # features/step_definitions/busqueda_de_productos.rb:13[0m[0m
 
-7 scenarios (7 passed)
-34 steps (34 passed)
-0m0.935s
+7 scenarios ([32m7 passed[0m)
+34 steps ([32m34 passed[0m)
+0m2.664s
